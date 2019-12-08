@@ -10,13 +10,16 @@ func TestStringFn(t* testing.T) {
     for index, part := range parts {
         t.Log(index, part)
     }
+    // A-B-C
     t.Log(strings.Join(parts, "-"))
 }
 
 func TestConv(t *testing.T) {
     s := strconv.Itoa(10)
+    // str=10
     t.Log("str="+s)
     if i,err := strconv.Atoi("10"); err == nil {
+        // 20
         t.Log(i+10)
     }
 }

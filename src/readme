@@ -15,3 +15,16 @@ G:协程
 协程等待队列，或者全局等待队列。
 当协程被中断，在寄存器当运行状态被保存在协程对象里，当协程再次获得运行机会，再次写入寄存器
 
+27.
+当receiver不知道producer放多少数据，receiver如何知道数据放完？
+1.特殊token可以告诉什么时候producer数据产生完成，比如-1代表数据放完了。 receiver收到
+-1，退出，代表数据接受完成。 尤其在多个receiver情况，producer需要
+知道现在有几个receiver，放入几个-1
+两个矛盾
+如果不放入token，receiver需要知道producer产生多少数据，什么时候数据产生 完
+尤其在多个receiver情况,receiver在调度的情况下，receiver不清楚自己可以处理几个数据，
+这个方案只能是在一个receiver情况下可行
+即便放入一个标志,在多个receiver情况下，produce需要确切知道现在receiver个数，
+因为每个receiver都需要收到一个结束标志 ，这样写程序耦合度很高
+2.如果token方案可行，producer需要知道确切receiver个数,因为每个receiver都需要收到一个
+结束标志。程序耦合度高

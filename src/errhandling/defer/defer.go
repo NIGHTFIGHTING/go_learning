@@ -5,6 +5,7 @@ import (
     "errhandling/defer/fib"
     "os"
     "bufio"
+    "errors"
 )
 
 func tryDefer() {
@@ -27,9 +28,27 @@ func tryDefer1() {
 }
 
 func writeFile(filename string) {
-    file, err := os.Create(filename)
+    //file, err := os.Create(filename)
+    file, err := os.OpenFile(
+        filename, os.O_EXCL|os.O_CREATE, 0666)
     if err != nil {
-        panic(err)
+        //panic(err)
+        //fmt.Println("file already exists")
+        //fmt.Println("Error:", err.Error())
+        // Error: open fib.txt: file exists
+        // open, fib.txt, file exists
+
+        // 这是一个非os.PathError的error
+        //err = errors.New("this is a custom error")
+        fmt.Println("Error:", err)
+        if pathError, ok := err.(*os.PathError); !ok{
+            panic(err)
+        } else {
+            fmt.Printf("%s, %s, %s\n", pathError.Op,
+                pathError.Path,
+                pathError.Err)
+        }
+        return
     }
     // 资源管理
     defer file.Close()
@@ -46,6 +65,6 @@ func writeFile(filename string) {
 
 func main() {
     //tryDefer()
-    //writeFile("fib.txt")
-    tryDefer1()
+    writeFile("fib.txt")
+    //tryDefer1()
 }

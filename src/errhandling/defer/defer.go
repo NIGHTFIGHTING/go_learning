@@ -5,7 +5,7 @@ import (
     "errhandling/defer/fib"
     "os"
     "bufio"
-    "errors"
+    //"errors"
 )
 
 func tryDefer() {

@@ -10,6 +10,7 @@ type Retriever struct {
 }
 
 // 系统接口
+// fmt.Printf("%v", )
 func (r *Retriever) String() string {
     return fmt.Sprintf(
         "Retriever: {Contents=%s}", r.Contents)

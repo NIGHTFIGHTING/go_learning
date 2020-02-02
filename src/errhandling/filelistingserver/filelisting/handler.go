@@ -4,11 +4,35 @@ import (
     "net/http"
     "os"
     "io/ioutil"
+    "strings"
+    //"errors"
 )
+
+const prefix = "/list/"
+
+// 实现type userError interface接口
+type userError string
+
+func (e userError) Error() string {
+    return e.Message()
+}
+
+func (e userError) Message() string {
+    return string(e)
+}
 
 func HandleFileList(writer http.ResponseWriter,
     request *http.Request) error {
-    path := request.URL.Path[len("/list/"):] // /list/fib.txt
+    // 请求的url不是/list/开头
+    // 防止访问这种地址出错,http://localhost:8888/li
+    if strings.Index(
+        request.URL.Path, prefix) != 0 {
+        //return errors.New("path must start " +
+          //  "with " + prefix)
+        return userError("path must start " +
+            "with " + prefix)
+    }
+    path := request.URL.Path[len(prefix):] // /list/fib.txt
     file, err := os.Open(path)
     if err != nil {
         // 错误太分散

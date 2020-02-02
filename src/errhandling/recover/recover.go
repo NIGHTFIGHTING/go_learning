@@ -8,6 +8,7 @@ import (
 func tryRecover() {
     defer func() {
         r := recover()
+        // type assertion
         if err, ok := r.(error); ok {
             fmt.Println("Error occurred:", err)
         } else {

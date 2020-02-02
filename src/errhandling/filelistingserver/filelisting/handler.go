@@ -11,6 +11,7 @@ func HandleFileList(writer http.ResponseWriter,
     path := request.URL.Path[len("/list/"):] // /list/fib.txt
     file, err := os.Open(path)
     if err != nil {
+        // 错误太分散
         //panic(err)
         //http.Error(writer,
           //  err.Error(),
@@ -20,6 +21,7 @@ func HandleFileList(writer http.ResponseWriter,
     defer file.Close()
     all, err := ioutil.ReadAll(file)
     if err != nil {
+        // 错误太分散
         //panic(err)
         return err
     }

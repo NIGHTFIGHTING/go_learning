@@ -10,13 +10,18 @@ import (
 type appHandler func(writer http.ResponseWriter,
     request *http.Request) error
 
+// 函数式编程
 func errWrapper(
     handler appHandler) func(
         http.ResponseWriter,*http.Request) {
     return func(writer http.ResponseWriter,
         request *http.Request) {
         err := handler(writer, request)
+        // 错误统一处理
         if err != nil {
+            //import "github.com/gpmgo/gopm/modules/log"
+            //log.Warn("Error handling request: %s",
+              //  err.Error())
             log.Printf("Error handling request: %s",
                 err.Error())
             code := http.StatusOK

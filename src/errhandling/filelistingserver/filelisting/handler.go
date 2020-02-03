@@ -13,6 +13,10 @@ const prefix = "/list/"
 // 实现type userError interface接口
 type userError string
 
+// type error interface {
+//     Error() string
+// }
+// 实现error的接口
 func (e userError) Error() string {
     return e.Message()
 }

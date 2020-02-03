@@ -44,4 +44,12 @@ func main() {
     fmt.Printf("s2=%v, len(s2)=%d, cap(s2)=%d\n", s2, len(s2), cap(s2))
     //panic: runtime error: slice bounds out of range [:7] with capacity 6
     //fmt.Println(s1[3:7])
+
+    s3 := append(s2, 10)
+    s4 := append(s3, 11)
+    s5 := append(s4, 12)
+    fmt.Printf("s3=%d, s4=%d, s5=%d\n", s3, s4, s5)
+    // 在s2后append超过capacity后，系统分配一个更加长的array
+    // s4 and s5 no longer view arr
+    fmt.Println("arr= ", arr)
 }

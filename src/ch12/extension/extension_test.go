@@ -10,19 +10,23 @@ type Pet struct {
 func (p *Pet) Speak() {
     fmt.Print("...")
 }
-// SpeakeTo调用Speak函数
+// SpeakTo调用Speak函数
 func (p *Pet) SpeakTo(host string) {
     p.Speak();
     fmt.Println(" ", host)
 }
 // -------------------------Dog扩展Pet-----------------------
 type Dog struct {
-    p *Pet
+    //p *Pet
+    Pet //扩展Pet
 }
 func (d *Dog) Speak() {
     // d.p.Speak();
     fmt.Print("wang")
 }
+
+//这个测试先不需要放开打印结果:... chao，如果放开打印wang chao
+/*
 func (d *Dog) SpeakTo(host string) {
     // 如果只更改Dog的Speak(),这里调用不能使用Dog的Speak函数
     // d.p.SpeakTo(host)
@@ -30,10 +34,13 @@ func (d *Dog) SpeakTo(host string) {
     d.Speak();
     fmt.Println(" ", host)
 }
+*/
+
 func TestDog(t *testing.T) {
     dog := new(Dog)
     // 如果不修改SpakeTo函数，只修改Speak函数，则打印的为：...  chao，因此需要修改SpeakTo函数
-    // 不能使用Dog的Speak函数,使用的是Pet的Speak函数.期望打印wang chao,因此需要修改SpeakTo函数
+    // 不能使用Dog的Speak函数,使用的是Pet的Speak函数.期望打印wang chao
+    // 因此需要修改SpeakTo函数
     dog.SpeakTo("chao");
 }
 

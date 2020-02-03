@@ -19,6 +19,14 @@ func printArray1(arr *[5]int) {
     }
 }
 
+// 使用slice修改数组
+func printArray2(arr []int) {
+    arr[0] = 200
+    for i, v := range arr {
+        fmt.Printf("index: %d value: %d\n", i, v)
+    }
+}
+
 func main() {
     var arr1 [5]int
     //arr2 := [3]int{1, 3, 5}
@@ -37,6 +45,13 @@ func main() {
     printArray1(&arr1)
     fmt.Println("printArray1(arr3)")
     printArray1(&arr3)
+    fmt.Println("arr1 and arr3")
+    fmt.Println(arr1, arr3)
+
+    fmt.Println("printArray2(arr1)")
+    printArray2(arr1[:])
+    fmt.Println("printArray2(arr3)")
+    printArray2(arr3[:])
     fmt.Println("arr1 and arr3")
     fmt.Println(arr1, arr3)
 

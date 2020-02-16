@@ -23,6 +23,7 @@ func generator() chan int {
 }
 func worker(id int, c chan int) {
     for n := range c {
+        // 模拟worker处理慢情况
         //time.Sleep(5 * time.Second)
         time.Sleep(1 * time.Second)
         fmt.Printf("Worker %d received %d\n",
@@ -53,10 +54,13 @@ func main() {
         }
         select {
         case n := <-c1:
+            // 缓存数据
             values = append(values, n)
         case n := <-c2:
+            // 缓存数据
             values = append(values, n)
         case activeWorker <- activeValue:
+            // 数据为准备号activeWorker是nil channel,这里会不会执行
             values = values[1:] 
         case <- time.After(800 * time.Millisecond):
             // 没有tick情况下表示，800ms内generator没有生成数据
@@ -65,6 +69,7 @@ func main() {
         case <- tick:
             fmt.Println("queue len = ", len(values))
         case <- tm:
+            // 这段程序运行10s退出
             fmt.Println("bye")
             return
         }

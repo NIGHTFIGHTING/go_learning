@@ -1,0 +1,6 @@
+2020/02/02 15:28:39 Error handling request: path must start with /list/
+2020/02/02 17:36:42 Error handling request: path must start with /list/
+2020/02/03 08:21:50 Error handling request: path must start with /list/
+2020/02/03 08:21:57 Error handling request: open a.txt: no such file or directory
+2020/02/03 08:22:07 Error handling request: open a: no such file or directory
+2020/02/04 10:10:42 Error handling request: open fib.t: no such file or directory

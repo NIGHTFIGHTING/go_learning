@@ -28,3 +28,7 @@ G:协程
 因为每个receiver都需要收到一个结束标志 ，这样写程序耦合度很高
 2.如果token方案可行，producer需要知道确切receiver个数,因为每个receiver都需要收到一个
 结束标志。程序耦合度高
+
+Golang从入门到精通:讲师:少林之巅
+https://study.163.com/course/introduction.htm?courseId=1004720008&share=1&shareId=1396904690#/courseDetail?tab=1
+https://www.bilibili.com/video/av83350913?p=3

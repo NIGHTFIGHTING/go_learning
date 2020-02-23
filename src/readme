@@ -29,10 +29,13 @@ G:协程
 2.如果token方案可行，producer需要知道确切receiver个数,因为每个receiver都需要收到一个
 结束标志。程序耦合度高
 
-Golang从入门到精通:讲师:少林之巅
+1.Golang从入门到精通:讲师:少林之巅
 https://study.163.com/course/introduction.htm?courseId=1004720008&share=1&shareId=1396904690#/courseDetail?tab=1
 https://www.bilibili.com/video/av83350913?p=3
-慕课网:Go语言从入门到达人之路
+2.慕课网:Go语言从入门到达人之路
 https://coding.imooc.com/learningpath/route?pathId=5
+3.全流程开发 GO实战电商网站高并发秒杀系统
 天翼云盘链接:
 https://cloud.189.cn/t/YBZF7bRNBVJj（访问码：0579）
+4.高并发&高性能 Go语言开发企业级抽奖项目 百度云
+https://coding.imooc.com/class/chapter/295.html#Anchor

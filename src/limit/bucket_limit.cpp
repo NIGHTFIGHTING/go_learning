@@ -2,6 +2,8 @@
 #include<iostream>
 #include<sys/time.h>
 #include<unordered_map>
+#include<map>
+#include <unistd.h> 
 
 using namespace std;
 
@@ -42,7 +44,8 @@ private:
 };
 
 int main() {
-    std::unordered_map<int, bool> request_allow;
+    //std::unordered_map<int, bool> request_allow;
+    std::map<int, bool> request_allow;
     // 限流50r/s，bucket为100r
     BucketLimit bucket_limit(50, 100);
     // for循环速度很快，这个for循环执行肯定是<1s
@@ -51,6 +54,7 @@ int main() {
             request_allow[i] = true;
         } else {
             request_allow[i] = false;
+            sleep(0.01);
         }
     }
     for(auto ite : request_allow) {

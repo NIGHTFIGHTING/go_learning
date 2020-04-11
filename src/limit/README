@@ -1,0 +1,4 @@
+限流参考书籍：
+1.《亿级流量网站架构核心技术 跟开涛学搭建高可用高并发系统》第4章：限流详解
+2.《极客时间-OpenResty从入门到实战》42丨如何应对突发流量：漏桶和令牌桶的概念
+3.《网易云-Golang从入门到精通》https://github.com/NIGHTFIGHTING/koala/tree/master/ppt/14.%20%E9%99%90%E6%B5%81%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%BC%80%E5%8F%91

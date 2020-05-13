@@ -42,7 +42,7 @@ https://cloud.189.cn/t/YBZF7bRNBVJj（访问码：0579）
 https://coding.imooc.com/class/chapter/295.html#Anchor
 http://www.52studyit.com/
 
-限流，降级，dconnectpool连接池，线程池，事物，CAP
+限流，降级，dconnectpool连接池，线程池，事物，CAP，负载均衡
 服务qps计算(metric)
 1.查看某台服务器的qps，比如rpc框架中可以提供，访问一个url可以看到这台机器的cpu，内存，以及服务qps
 2.普罗尼修斯请求server,server需要提供接口

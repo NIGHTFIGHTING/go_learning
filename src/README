@@ -67,3 +67,5 @@ https://github.com/CyC2018/CS-Notes
 6.系统设计题目:
 https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md
 7.广告书籍，搜索推荐
+ElasticSearch,Redis使用,用户数据的存储,以及多维度的个性化展示
+Redis实战书中有<基于redis构建广告,搜索的>

@@ -73,5 +73,6 @@ https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.m
 搜索引擎-原理、技术与系统:https://book.douban.com/subject/1481158/
 搜索引擎:https://book.douban.com/subject/4861766/
 深入搜索引擎:https://book.douban.com/subject/3729518/
+自制搜索引擎:https://www.ituring.com.cn/book/1582
 ElasticSearch,Redis使用,用户数据的存储,以及多维度的个性化展示
 Redis实战书中有<基于redis构建广告,搜索的>

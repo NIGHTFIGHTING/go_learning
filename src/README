@@ -97,8 +97,17 @@ Redis实战书中有<1.基于redis构建广告,搜索的服务，2.twitter服务
 <<Redis 深度历险：核心原理与应用实践>>
 <<数据密集型应用系统设计>>
 《操作系统导论》https://zhuanlan.zhihu.com/p/49286109
+转自http://www.feemic.cn/mooc/icourse163/1002692015#
+操作系统（哈工大李治军老师）的超清版本，课件可在下方链接获取。
+慕课网: http://www.feemic.cn/mooc/icourse163/1002692015#。
+百度云链接：https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw 提取码：qoll
+配套实验课：https://www.shiyanlou.com/courses/115
+https://hoverwinter.gitbooks.io/hit-oslab-manual/index.html
+配套教材：<<操作系统概念>>https://book.douban.com/subject/2109679/
+王爽老师的《汇编语言》第三版,搭配小甲鱼的汇编语言
 <<分布式系统概念与设计>>
 《算法：C语言实现》第1～4部分https://book.douban.com/subject/4065258/
 <<数据结构与算法分析>> https://book.douban.com/subject/1139426/
 <<架构即未来:现代企业可扩展的Web架构、流程和组织>>
 <<企业IT架构转型之道：阿里巴巴中台战略思想与架构实战>>
+<<Kafka权威指南>> <<Apache Kafka实战>>
